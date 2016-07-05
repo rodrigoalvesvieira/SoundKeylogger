@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EBBFEA671D2C03B90096363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA661D2C03B90096363D /* AppDelegate.swift */; };
+		EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */; };
+		EBBFEA6C1D2C03B90096363D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBFEA6A1D2C03B90096363D /* Main.storyboard */; };
+		EBBFEA6F1D2C03B90096363D /* SoundKeylogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA6D1D2C03B90096363D /* SoundKeylogger.xcdatamodeld */; };
+		EBBFEA711D2C03B90096363D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBBFEA701D2C03B90096363D /* Assets.xcassets */; };
+		EBBFEA741D2C03B90096363D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBFEA721D2C03B90096363D /* LaunchScreen.storyboard */; };
+		EBBFEA7D1D2C07870096363D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA7C1D2C07870096363D /* Color.swift */; };
+		EBBFEA801D2C08140096363D /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA7F1D2C08140096363D /* UIColorExtension.swift */; };
+		EBBFEA831D2C08360096363D /* Shared.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA821D2C08360096363D /* Shared.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EBBFEA631D2C03B90096363D /* SoundKeylogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundKeylogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBBFEA661D2C03B90096363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCaptureViewController.swift; sourceTree = "<group>"; };
+		EBBFEA6B1D2C03B90096363D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBBFEA6E1D2C03B90096363D /* SoundKeylogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SoundKeylogger.xcdatamodel; sourceTree = "<group>"; };
+		EBBFEA701D2C03B90096363D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBBFEA731D2C03B90096363D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBBFEA751D2C03B90096363D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBBFEA7C1D2C07870096363D /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Enums/Color.swift; sourceTree = "<group>"; };
+		EBBFEA7F1D2C08140096363D /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = Extensions/UIColorExtension.swift; sourceTree = "<group>"; };
+		EBBFEA821D2C08360096363D /* Shared.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Shared.swift; path = Util/Shared.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBBFEA601D2C03B90096363D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EBBFEA5A1D2C03B90096363D = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA651D2C03B90096363D /* SoundKeylogger */,
+				EBBFEA641D2C03B90096363D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EBBFEA641D2C03B90096363D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA631D2C03B90096363D /* SoundKeylogger.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBFEA651D2C03B90096363D /* SoundKeylogger */ = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA661D2C03B90096363D /* AppDelegate.swift */,
+				EBBFEA811D2C082B0096363D /* Util */,
+				EBBFEA7E1D2C08060096363D /* Extensions */,
+				EBBFEA7B1D2C07790096363D /* Enums */,
+				EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */,
+				EBBFEA6A1D2C03B90096363D /* Main.storyboard */,
+				EBBFEA701D2C03B90096363D /* Assets.xcassets */,
+				EBBFEA721D2C03B90096363D /* LaunchScreen.storyboard */,
+				EBBFEA751D2C03B90096363D /* Info.plist */,
+				EBBFEA6D1D2C03B90096363D /* SoundKeylogger.xcdatamodeld */,
+			);
+			path = SoundKeylogger;
+			sourceTree = "<group>";
+		};
+		EBBFEA7B1D2C07790096363D /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA7C1D2C07870096363D /* Color.swift */,
+			);
+			name = Enums;
+			sourceTree = "<group>";
+		};
+		EBBFEA7E1D2C08060096363D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA7F1D2C08140096363D /* UIColorExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EBBFEA811D2C082B0096363D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				EBBFEA821D2C08360096363D /* Shared.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBBFEA621D2C03B90096363D /* SoundKeylogger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBBFEA781D2C03B90096363D /* Build configuration list for PBXNativeTarget "SoundKeylogger" */;
+			buildPhases = (
+				EBBFEA5F1D2C03B90096363D /* Sources */,
+				EBBFEA601D2C03B90096363D /* Frameworks */,
+				EBBFEA611D2C03B90096363D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SoundKeylogger;
+			productName = SoundKeylogger;
+			productReference = EBBFEA631D2C03B90096363D /* SoundKeylogger.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBBFEA5B1D2C03B90096363D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Rodrigo Alves";
+				TargetAttributes = {
+					EBBFEA621D2C03B90096363D = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 6F79H32849;
+					};
+				};
+			};
+			buildConfigurationList = EBBFEA5E1D2C03B90096363D /* Build configuration list for PBXProject "SoundKeylogger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBBFEA5A1D2C03B90096363D;
+			productRefGroup = EBBFEA641D2C03B90096363D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBBFEA621D2C03B90096363D /* SoundKeylogger */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBBFEA611D2C03B90096363D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBFEA741D2C03B90096363D /* LaunchScreen.storyboard in Resources */,
+				EBBFEA711D2C03B90096363D /* Assets.xcassets in Resources */,
+				EBBFEA6C1D2C03B90096363D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBBFEA5F1D2C03B90096363D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBBFEA831D2C08360096363D /* Shared.swift in Sources */,
+				EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */,
+				EBBFEA7D1D2C07870096363D /* Color.swift in Sources */,
+				EBBFEA801D2C08140096363D /* UIColorExtension.swift in Sources */,
+				EBBFEA671D2C03B90096363D /* AppDelegate.swift in Sources */,
+				EBBFEA6F1D2C03B90096363D /* SoundKeylogger.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EBBFEA6A1D2C03B90096363D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBFEA6B1D2C03B90096363D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBBFEA721D2C03B90096363D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBBFEA731D2C03B90096363D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBBFEA761D2C03B90096363D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBBFEA771D2C03B90096363D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBBFEA791D2C03B90096363D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SoundKeylogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBBFEA7A1D2C03B90096363D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = SoundKeylogger/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBBFEA5E1D2C03B90096363D /* Build configuration list for PBXProject "SoundKeylogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBFEA761D2C03B90096363D /* Debug */,
+				EBBFEA771D2C03B90096363D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBBFEA781D2C03B90096363D /* Build configuration list for PBXNativeTarget "SoundKeylogger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBBFEA791D2C03B90096363D /* Debug */,
+				EBBFEA7A1D2C03B90096363D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EBBFEA6D1D2C03B90096363D /* SoundKeylogger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EBBFEA6E1D2C03B90096363D /* SoundKeylogger.xcdatamodel */,
+			);
+			currentVersion = EBBFEA6E1D2C03B90096363D /* SoundKeylogger.xcdatamodel */;
+			path = SoundKeylogger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = EBBFEA5B1D2C03B90096363D /* Project object */;
+}

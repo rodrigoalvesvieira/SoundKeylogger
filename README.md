@@ -2,12 +2,15 @@
 
 An experimental project to demonstrate how a user keyboard input may be sniffed through the pattern analysis of the sounds emitted by the keystrokes.
 
+This field of study is called [Acoustic cryptanalysis] and is a type of side channel attack towards electronic devices.
+
 This project was created as an assignment for the [IF754 - Musical Computing] class of 2016.1 at [CIn/UFPE].
 
 ## Authors
 
 * Rodrigo Alves Vieira <rav2 [at] cin.ufpe.br>
 * João Paulo Luna <jpsl2 [at] cin.ufpe.br>
+* Edymir Étienne Semedo <eebls [at] cin.ufpe.br>
 
 ## References
 
@@ -21,8 +24,9 @@ This project was created as an assignment for the [IF754 - Musical Computing] cl
 
 ## Copyright
 
-© 2016 Rodrigo Alves Vieira & João Paulo Luna. All Rights Reserved.
+© 2016 Rodrigo Alves Vieira, João Paulo Luna & Edymir Étienne Semedo. All Rights Reserved.
 
 [IF754 - Musical Computing]: http://www.cin.ufpe.br/~musica/
 [CIn/UFPE]: http://www2.cin.ufpe.br/site/index.php
 [EasyClassifier]: https://sourceforge.net/projects/easyclassifier/
+[Acoustic cryptanalysis]: https://en.wikipedia.org/wiki/Acoustic_cryptanalysis

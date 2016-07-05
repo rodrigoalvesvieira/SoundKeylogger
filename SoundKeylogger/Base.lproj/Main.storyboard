@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="a70-vC-n5x">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Sound Keylogger-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="StartCaptureViewController" customModule="SoundKeylogger" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERH-CB-f76">
+                                <rect key="frame" x="180" y="257" width="241" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="CbP-oJ-EQt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="36"/>
+                                <color key="tintColor" red="0.33333333333333331" green="0.90310132575757573" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start Capture">
+                                    <color key="titleColor" red="0.12941176470588234" green="0.80392156862745101" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="performCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amB-7D-CB4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ERH-CB-f76" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="193" id="UXW-qf-D12"/>
+                            <constraint firstItem="ERH-CB-f76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hF3-u7-yLH"/>
+                            <constraint firstItem="ERH-CB-f76" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xBz-WZ-x7q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Sound Keylogger" id="Jyk-9M-s1n"/>
+                    <connections>
+                        <outlet property="startCaptureButton" destination="ERH-CB-f76" id="NuH-A1-rXR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="789" y="-344"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hcb-DI-bTp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a70-vC-n5x" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="aN2-Wl-2q6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6z3-Fu-k8d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ps7-s3-LjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="-344"/>
+        </scene>
+    </scenes>
+</document>
