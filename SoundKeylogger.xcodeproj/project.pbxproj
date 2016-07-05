@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB0D371B7DB5CFBAC87F1C3F /* Pods_SoundKeylogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */; };
+		EB6833071D2C423400F154AF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6833061D2C423400F154AF /* StringExtension.swift */; };
+		EBAD01B11D2C469500E2383B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */; };
 		EBBFEA671D2C03B90096363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA661D2C03B90096363D /* AppDelegate.swift */; };
 		EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */; };
 		EBBFEA6C1D2C03B90096363D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBBFEA6A1D2C03B90096363D /* Main.storyboard */; };
@@ -19,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144C0E2CB991576B84D9CF85 /* Pods-SoundKeylogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundKeylogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger.debug.xcconfig"; sourceTree = "<group>"; };
+		D8E824B6DEC1CAACBDD21BBF /* Pods-SoundKeylogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundKeylogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger.release.xcconfig"; sourceTree = "<group>"; };
+		DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundKeylogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB6833061D2C423400F154AF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBBFEA631D2C03B90096363D /* SoundKeylogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundKeylogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBFEA661D2C03B90096363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCaptureViewController.swift; sourceTree = "<group>"; };
@@ -37,17 +45,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB0D371B7DB5CFBAC87F1C3F /* Pods_SoundKeylogger.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15313C2234FC04C034E04226 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D17B42C31A0CDE6C8D9F59C5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				144C0E2CB991576B84D9CF85 /* Pods-SoundKeylogger.debug.xcconfig */,
+				D8E824B6DEC1CAACBDD21BBF /* Pods-SoundKeylogger.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		EBBFEA5A1D2C03B90096363D = {
 			isa = PBXGroup;
 			children = (
 				EBBFEA651D2C03B90096363D /* SoundKeylogger */,
 				EBBFEA641D2C03B90096363D /* Products */,
+				D17B42C31A0CDE6C8D9F59C5 /* Pods */,
+				15313C2234FC04C034E04226 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +99,7 @@
 				EBBFEA701D2C03B90096363D /* Assets.xcassets */,
 				EBBFEA721D2C03B90096363D /* LaunchScreen.storyboard */,
 				EBBFEA751D2C03B90096363D /* Info.plist */,
+				EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */,
 				EBBFEA6D1D2C03B90096363D /* SoundKeylogger.xcdatamodeld */,
 			);
 			path = SoundKeylogger;
@@ -88,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				EBBFEA7F1D2C08140096363D /* UIColorExtension.swift */,
+				EB6833061D2C423400F154AF /* StringExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -107,9 +137,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EBBFEA781D2C03B90096363D /* Build configuration list for PBXNativeTarget "SoundKeylogger" */;
 			buildPhases = (
+				71B69AC3F0A6F5164F5B67DA /* [CP] Check Pods Manifest.lock */,
 				EBBFEA5F1D2C03B90096363D /* Sources */,
 				EBBFEA601D2C03B90096363D /* Frameworks */,
 				EBBFEA611D2C03B90096363D /* Resources */,
+				526F6FCFEB7AB095B4444EAF /* [CP] Embed Pods Frameworks */,
+				4AAC95335494142FE2175A48 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +166,7 @@
 					EBBFEA621D2C03B90096363D = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 6F79H32849;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -160,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBFEA741D2C03B90096363D /* LaunchScreen.storyboard in Resources */,
+				EBAD01B11D2C469500E2383B /* GoogleService-Info.plist in Resources */,
 				EBBFEA711D2C03B90096363D /* Assets.xcassets in Resources */,
 				EBBFEA6C1D2C03B90096363D /* Main.storyboard in Resources */,
 			);
@@ -167,12 +202,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4AAC95335494142FE2175A48 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		526F6FCFEB7AB095B4444EAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71B69AC3F0A6F5164F5B67DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EBBFEA5F1D2C03B90096363D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				EBBFEA831D2C08360096363D /* Shared.swift in Sources */,
+				EB6833071D2C423400F154AF /* StringExtension.swift in Sources */,
 				EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */,
 				EBBFEA7D1D2C07870096363D /* Color.swift in Sources */,
 				EBBFEA801D2C08140096363D /* UIColorExtension.swift in Sources */,
@@ -288,6 +372,7 @@
 		};
 		EBBFEA791D2C03B90096363D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 144C0E2CB991576B84D9CF85 /* Pods-SoundKeylogger.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -296,11 +381,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		EBBFEA7A1D2C03B90096363D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E824B6DEC1CAACBDD21BBF /* Pods-SoundKeylogger.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -309,6 +396,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -331,6 +419,7 @@
 				EBBFEA7A1D2C03B90096363D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

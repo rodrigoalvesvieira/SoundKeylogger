@@ -14,16 +14,16 @@ struct Shared {
         static let pink = UIColor(rgba: Color.Pink.rawValue)
         static let darkGray = UIColor(rgba: Color.LightGray.rawValue)
         static let babyBlue = UIColor(rgba: Color.BabyBlue.rawValue)
-        static let white = UIColor.whiteColor()
+        static let white = UIColor.white()
         static let green = UIColor(rgba: Color.Green.rawValue)
     }
     
     struct LayoutHelpers {
-        static let screenSize = UIScreen.mainScreen().bounds
+        static let screenSize = UIScreen.main().bounds
         
         static let navigationBarTitleAttributes = [
             NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 20)!,
-            NSForegroundColorAttributeName : UIColor.whiteColor()
+            NSForegroundColorAttributeName : UIColor.white()
         ]
         
         static let navigationBarFont = [NSFontAttributeName: UIFont(name: "AvenirNext-Medium", size: 20)!]

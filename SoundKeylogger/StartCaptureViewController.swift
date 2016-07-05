@@ -15,18 +15,18 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     @IBOutlet weak var startCaptureButton: UIButton!
     
     // MARK: - Variables
-    var audioPlayer: AVAudioPlayer?
-    var audioRecorder: AVAudioRecorder?
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+                
         self.navigationController?.navigationBar.tintColor = Shared.Colors.pink
         self.navigationController?.navigationBar.barTintColor = Shared.Colors.dark
         
         self.navigationController!.navigationBar.titleTextAttributes = Shared.LayoutHelpers.navigationBarTitleAttributes
-        self.startCaptureButton.layer.borderColor = Shared.Colors.green.CGColor
+        self.startCaptureButton.layer.borderColor = Shared.Colors.green.cgColor
         
         self.startCaptureButton.layer.borderWidth = 2.0
         
@@ -39,21 +39,105 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return .LightContent
+        return .lightContent
     }
     
-    func setupAudioEnvironment() {
-        let dirPaths =
-            NSSearchPathForDirectoriesInDomains(.DocumentDirectory,
-                                                .UserDomainMask, true)
+    func loadRecordingUI() {
+        NSLog("loadRecordingUI() called")
+    }
+    
+    class func getDocumentsDirectory() -> String {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
         
-        if let docsDir = dirPaths[0] as? String {
+        return documentsDirectory
+    }
+    
+    func startRecording() {
+        NSLog("startRecording() called")
+        
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        
+        let audioFilename = documentsDirectory.stringByAppendingPathComponent(pathComponent: "recording.m4a")
+        let audioURL = NSURL(fileURLWithPath: audioFilename)
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+            AVSampleRateKey: 12000.0,
+            AVNumberOfChannelsKey: 1 as NSNumber,
+            AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+        ]
+        
+        do {
+            
+            audioRecorder = try AVAudioRecorder(url: audioURL as URL, settings: settings)
+            
+            audioRecorder.delegate = self
+            audioRecorder.record()
+            
+            startCaptureButton.setTitle("Parar", for: .normal)
+        } catch {
+            finishRecording(success: false)
         }
     }
     
-    @IBAction func performCapture(sender: UIButton) {
+    func setupAudioEnvironment() {
+        recordingSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordingSession.setCategory(AVAudioSessionCategoryPlayAndRecord)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] (allowed: Bool) -> Void in
+                DispatchQueue.main.asynchronously() {
+                    if allowed {
+                        self.loadRecordingUI()
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+            self.displayErrorMessage()
+        }
+    }
+    
+    func displayErrorMessage() {
+        let alert = UIAlertController(title: "Oops!", message:"Falha ao tentar capturar áudio!", preferredStyle: .alert)
         
+        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
+        self.present(alert, animated: true){}
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
         
+        if success {
+            startCaptureButton.setTitle("Reiniciar Captura", for: .normal)
+            
+            
+        } else {
+            startCaptureButton.setTitle("Iniciar Captura", for: .normal)
+            // recording failed :(
+
+            self.displayErrorMessage()
+        }
+    }
+    
+    //  iOS might stop your recording for some reason out of your control, such as if a phone call comes in. We are the delegate of the audio recorder, so if this situation crops up you'll be sent a audioRecorderDidFinishRecording() message that you can pass on to finishRecording() like this:
+    func audioRecorderDidFinishRecording(recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+    
+    @IBAction func performCapture(_ sender: UIButton) {
+        if audioRecorder == nil {
+            startRecording()
+        } else {
+            finishRecording(success: true)
+        }
     }
 }
-
