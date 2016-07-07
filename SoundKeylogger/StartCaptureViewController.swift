@@ -105,9 +105,6 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     
     func displayErrorMessage() {
         let alert = UIAlertController(title: "Oops!", message:"Falha ao tentar capturar áudio!", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in })
-        self.present(alert, animated: true){}
     }
     
     func finishRecording(success: Bool) {

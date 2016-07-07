@@ -2,7 +2,7 @@
 
 An experimental project to demonstrate how a user keyboard input may be sniffed through the pattern analysis of the sounds emitted by the keystrokes.
 
-This field of study is called [Acoustic cryptanalysis] and is a type of side channel attack towards electronic devices.
+This field of study is called [Acoustic cryptanalysis], (also known as [Acoustic Keyboard Eavesdropping]) and is a type of side channel attack towards electronic devices.
 
 This project was created as an assignment for the [IF754 - Musical Computing] class of 2016.1 at [CIn/UFPE].
 
@@ -30,3 +30,4 @@ This project was created as an assignment for the [IF754 - Musical Computing] cl
 [CIn/UFPE]: http://www2.cin.ufpe.br/site/index.php
 [EasyClassifier]: https://sourceforge.net/projects/easyclassifier/
 [Acoustic cryptanalysis]: https://en.wikipedia.org/wiki/Acoustic_cryptanalysis
+[Acoustic Keyboard Eavesdropping]: http://www.nytimes.com/2004/12/12/magazine/acoustic-keyboard-eavesdropping.html
