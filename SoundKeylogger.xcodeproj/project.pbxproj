@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		CB0D371B7DB5CFBAC87F1C3F /* Pods_SoundKeylogger.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */; };
 		EB6833071D2C423400F154AF /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB6833061D2C423400F154AF /* StringExtension.swift */; };
+		EB8239081D2EAA2200611B7A /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB8239071D2EAA2200611B7A /* DateExtension.swift */; };
 		EBAD01B11D2C469500E2383B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */; };
 		EBBFEA671D2C03B90096363D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA661D2C03B90096363D /* AppDelegate.swift */; };
 		EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBBFEA681D2C03B90096363D /* StartCaptureViewController.swift */; };
@@ -26,6 +27,7 @@
 		D8E824B6DEC1CAACBDD21BBF /* Pods-SoundKeylogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundKeylogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger.release.xcconfig"; sourceTree = "<group>"; };
 		DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundKeylogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB6833061D2C423400F154AF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
+		EB8239071D2EAA2200611B7A /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Extensions/DateExtension.swift; sourceTree = "<group>"; };
 		EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EBBFEA631D2C03B90096363D /* SoundKeylogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundKeylogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBBFEA661D2C03B90096363D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				EBBFEA7F1D2C08140096363D /* UIColorExtension.swift */,
+				EB8239071D2EAA2200611B7A /* DateExtension.swift */,
 				EB6833061D2C423400F154AF /* StringExtension.swift */,
 			);
 			name = Extensions;
@@ -256,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBBFEA831D2C08360096363D /* Shared.swift in Sources */,
+				EB8239081D2EAA2200611B7A /* DateExtension.swift in Sources */,
 				EB6833071D2C423400F154AF /* StringExtension.swift in Sources */,
 				EBBFEA691D2C03B90096363D /* StartCaptureViewController.swift in Sources */,
 				EBBFEA7D1D2C07870096363D /* Color.swift in Sources */,
@@ -377,7 +381,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoundKeylogger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -392,7 +396,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = SoundKeylogger/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kickassapps.SoundKeylogger;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -12,4 +12,8 @@ extension String {
     func stringByAppendingPathComponent(pathComponent: String) -> String {
         return (self as NSString).appendingPathComponent(pathComponent)
     }
+    
+    var dateFromISO8601: Date? {
+        return Date.Formatter.iso8601.date(from: self)
+    }
 }

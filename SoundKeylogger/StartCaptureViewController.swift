@@ -18,6 +18,8 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
+    var newCaptureURL: URL?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -54,13 +56,15 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     }
     
     func startRecording() {
-        NSLog("startRecording() called")
+        NSLog("startRecording() chamado")
         
         let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
         let documentsDirectory = paths[0]
         
         let audioFilename = documentsDirectory.stringByAppendingPathComponent(pathComponent: "recording.m4a")
         let audioURL = NSURL(fileURLWithPath: audioFilename)
+        
+        newCaptureURL = audioURL as URL
         
         let settings = [
             AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -103,17 +107,67 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
         }
     }
     
+    func sendToServer(audioUrl: NSURL) {
+        NSLog("sendToServer() chamado")
+        
+        let storageRef = Shared.FirebaseInstance.storage.reference()
+        
+        let stringFromDate = Date().iso8601
+        if let dateFromString = stringFromDate.dateFromISO8601 {
+            let fileName = "recording-\(dateFromString.iso8601).m4a"
+            
+            NSLog("Nome do arquivo no servidor remoto é \(fileName)")
+            let audioRef = storageRef.child(fileName)
+            
+            audioRef.putFile(audioUrl as URL, metadata: nil) { metadata, error in
+                if (error != nil) {
+                    // Uh-oh, an error occurred!
+                    NSLog("Ocorreu um erro: \(error.debugDescription)")
+                    
+                } else {
+                    // Metadata contains file metadata such as size, content-type, and download URL.
+                    
+                    if let downloadURL = metadata?.downloadURL() {
+                        let rawDownloadURL = "\(downloadURL)"
+
+                        NSLog("URL de download é \(downloadURL)")
+                        self.displaySuccessMessage(remoteFileName: rawDownloadURL)
+                    }
+                }
+            }
+
+        }
+    }
+    
     func displayErrorMessage() {
-        let alert = UIAlertController(title: "Oops!", message:"Falha ao tentar capturar áudio!", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Oops!", message:"Falha ao tentar capturar áudio!", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func displaySuccessMessage(remoteFileName: String) {
+        let alertController = UIAlertController(title: "Áudio capturado com sucesso!", message: "Está gravado com o nome \(remoteFileName).", preferredStyle: .alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true, completion: nil)
     }
     
     func finishRecording(success: Bool) {
+        NSLog("finishRecording() chamado")
+        
         audioRecorder.stop()
         audioRecorder = nil
         
         if success {
             startCaptureButton.setTitle("Reiniciar Captura", for: .normal)
             
+            if let captureURL = newCaptureURL {
+                NSLog("Áudio capturado com sucesso \(captureURL)")
+                self.sendToServer(audioUrl: captureURL)
+            }
             
         } else {
             startCaptureButton.setTitle("Iniciar Captura", for: .normal)

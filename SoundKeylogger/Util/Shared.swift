@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 struct Shared {
+    struct FirebaseInstance {
+        static let storage = FIRStorage.storage()
+        static let storageRef = storage.reference(forURL: "gs://captures")
+    }
+    
     struct Colors {
         static let dark = UIColor(rgba: Color.Dark.rawValue)
         static let pink = UIColor(rgba: Color.Pink.rawValue)
