@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,22 +32,30 @@
                                     <action selector="performCapture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="amB-7D-CB4"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="StS-z9-OhU">
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="StS-z9-OhU" firstAttribute="top" secondItem="ERH-CB-f76" secondAttribute="bottom" constant="19" id="1JW-xG-lwz"/>
+                            <constraint firstItem="StS-z9-OhU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3xQ-Xv-Pe0"/>
+                            <constraint firstAttribute="bottom" secondItem="StS-z9-OhU" secondAttribute="bottom" constant="20" symbolic="YES" id="UP1-2N-KRy"/>
                             <constraint firstItem="ERH-CB-f76" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="193" id="UXW-qf-D12"/>
+                            <constraint firstItem="StS-z9-OhU" firstAttribute="centerX" secondItem="ERH-CB-f76" secondAttribute="centerX" id="W0I-gU-rKI"/>
                             <constraint firstItem="ERH-CB-f76" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hF3-u7-yLH"/>
                             <constraint firstItem="ERH-CB-f76" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xBz-WZ-x7q"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Sound Keylogger" id="Jyk-9M-s1n"/>
                     <connections>
+                        <outlet property="loadingAreaView" destination="StS-z9-OhU" id="GH3-qw-DMn"/>
                         <outlet property="startCaptureButton" destination="ERH-CB-f76" id="NuH-A1-rXR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="789" y="-344"/>
+            <point key="canvasLocation" x="788" y="-344.07796101949026"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hcb-DI-bTp">

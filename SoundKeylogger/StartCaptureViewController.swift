@@ -8,17 +8,21 @@
 
 import UIKit
 import AVFoundation
+import MRProgress
 
 class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate  {
     
     // MARK: - Outlets
     @IBOutlet weak var startCaptureButton: UIButton!
     
+    @IBOutlet weak var loadingAreaView: UIView!
+    
     // MARK: - Variables
     var recordingSession: AVAudioSession!
     var audioRecorder: AVAudioRecorder!
     
     var newCaptureURL: URL?
+    var downloadURL: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +76,8 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
             AVNumberOfChannelsKey: 1 as NSNumber,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
+        
+        MRProgressOverlayView.showOverlayAdded(to: self.loadingAreaView, animated: true)
         
         do {
             
@@ -129,6 +135,8 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
                     
                     if let downloadURL = metadata?.downloadURL() {
                         let rawDownloadURL = "\(downloadURL)"
+                        
+                        self.downloadURL = rawDownloadURL
 
                         NSLog("URL de download é \(downloadURL)")
                         self.displaySuccessMessage(remoteFileName: rawDownloadURL)
@@ -147,12 +155,22 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
     }
     
     func displaySuccessMessage(remoteFileName: String) {
-        let alertController = UIAlertController(title: "Áudio capturado com sucesso!", message: "Está gravado com o nome \(remoteFileName).", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Áudio capturado com sucesso!", message: "Pode ser recuperado na URL: \(remoteFileName).", preferredStyle: .alert)
         
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alertController.addAction(defaultAction)
         
+        let openLinkAction = UIAlertAction(title: "Seguir link", style: .default, handler: openURL)
+        alertController.addAction(openLinkAction)
+        
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func openURL(alert: UIAlertAction!) {
+        if let url = self.downloadURL {
+            NSLog("Abrindo url...")
+            UIApplication.shared().openURL(URL(string: url)!)
+        }
     }
     
     func finishRecording(success: Bool) {
@@ -160,6 +178,8 @@ class StartCaptureViewController: UIViewController, AVAudioPlayerDelegate, AVAud
         
         audioRecorder.stop()
         audioRecorder = nil
+        
+        MRProgressOverlayView.dismissOverlay(for: self.loadingAreaView, animated: true)
         
         if success {
             startCaptureButton.setTitle("Reiniciar Captura", for: .normal)

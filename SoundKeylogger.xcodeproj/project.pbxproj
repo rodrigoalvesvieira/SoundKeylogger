@@ -26,6 +26,7 @@
 		144C0E2CB991576B84D9CF85 /* Pods-SoundKeylogger.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundKeylogger.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger.debug.xcconfig"; sourceTree = "<group>"; };
 		D8E824B6DEC1CAACBDD21BBF /* Pods-SoundKeylogger.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SoundKeylogger.release.xcconfig"; path = "Pods/Target Support Files/Pods-SoundKeylogger/Pods-SoundKeylogger.release.xcconfig"; sourceTree = "<group>"; };
 		DF643E2E086A50ECDFFCF89C /* Pods_SoundKeylogger.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SoundKeylogger.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB4980851D34883D00270106 /* SoundKeylogger-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoundKeylogger-Bridging-Header.h"; sourceTree = "<group>"; };
 		EB6833061D2C423400F154AF /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = Extensions/StringExtension.swift; sourceTree = "<group>"; };
 		EB8239071D2EAA2200611B7A /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateExtension.swift; path = Extensions/DateExtension.swift; sourceTree = "<group>"; };
 		EBAD01B01D2C469500E2383B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				EBBFEA661D2C03B90096363D /* AppDelegate.swift */,
+				EB4980851D34883D00270106 /* SoundKeylogger-Bridging-Header.h */,
 				EBBFEA811D2C082B0096363D /* Util */,
 				EBBFEA7E1D2C08060096363D /* Extensions */,
 				EBBFEA7B1D2C07790096363D /* Enums */,

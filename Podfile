@@ -9,4 +9,6 @@ target 'SoundKeylogger' do
 
   pod 'Firebase'
   pod 'Firebase/Storage'
+  
+  pod 'MRProgress'
 end
