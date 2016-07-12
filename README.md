@@ -1,6 +1,6 @@
 # SoundKeylogger
 
-An experimental project to demonstrate how a user keyboard input may be sniffed through the pattern analysis of the sounds emitted by the keystrokes.
+An experimental project to demonstrate how a user keyboard input may be sniffed through the pattern analysis of the sounds emitted by the keystrokes (based on [pyAudioAnalysis]).
 
 This field of study is called [Acoustic cryptanalysis], (also known as [Acoustic Keyboard Eavesdropping]) and is a type of side channel attack towards electronic devices.
 
@@ -21,6 +21,10 @@ This project was created as an assignment for the [IF754 - Musical Computing] cl
 * Acoustic Snooping on Typed Information https://freedom-to-tinker.com/blog/felten/acoustic-snooping-typed-information/
 * All In One Keylogger http://www.relytec.com/help/keylogger_microphone_recording.htm
 * Sound Logger Protection https://www.spyshelter.com/sound-logger-protection/
+* Fast fourier transform https://en.wikipedia.org/wiki/Fast_Fourier_transform
+* Support vector machine https://en.wikipedia.org/wiki/Support_vector_machine
+* Dual tone multi frequency signaling https://en.wikipedia.org/wiki/Dual-tone_multi-frequency_signaling
+* KNN https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm
 
 ## Copyright
 
@@ -31,3 +35,4 @@ This project was created as an assignment for the [IF754 - Musical Computing] cl
 [EasyClassifier]: https://sourceforge.net/projects/easyclassifier/
 [Acoustic cryptanalysis]: https://en.wikipedia.org/wiki/Acoustic_cryptanalysis
 [Acoustic Keyboard Eavesdropping]: http://www.nytimes.com/2004/12/12/magazine/acoustic-keyboard-eavesdropping.html
+[pyAudioAnalysis]: https://github.com/tyiannak/pyAudioAnalysis
